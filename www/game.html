@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div align="center">
+        <form name="form_count">
+            <input name="counter" type="text" size="3">
+        </form>
+    </div>
+    <button type="button" onclick="window.location.href='index.html'" style="position:absolute; right:5px; top:5px">
+        ゲームを終了
+    </button>
+    <div onclick="ball.speedUp()" style="color: #444; position:absolute; right:5px; top:35px">
+        ここ押したら？
+    </div>
+    <canvas id="playField" width="320" height="500"></canvas>
+    <button id="left" class="button--small" style="position:absolute; left:5px; bottom:5px" onclick="paddle.slide('left')">←</button>
+    <button id="right" class="button--small" style="position:absolute; right:5px; bottom:5px" onclick="paddle.slide('right')">→</button>
+    <script src="js/main.js"></script>
+</body>
+</html>

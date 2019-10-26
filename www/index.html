@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript">
+        <!--
+        window.onload = function(){
+            document.getElementById("startButton").onclick = function(){
+                var parameters = {
+                    level: document.getElementById("level").value,
+                    animation: document.getElementById("animation").value
+                }
+                localStorage.setItem('parameters', JSON.stringify(parameters));
+                location.href = "game.html";
+            }
+        }
+        -->
+    </script>
+</head>
+<body id="index_body">
+    <h1>ブロック崩し</h1>
+    <br>
+    <form name="form">
+        <div align="center">
+            難易度　　　　　
+            <select id="level" name="level">
+                <option value="LEVEL1">LEVEL1</option>
+                <option value="LEVEL2">LEVEL2</option>
+                <option value="LEVEL3">LEVEL3</option>
+            </select>
+            <br>
+            アニメーション　
+            <select id="animation" name="animation">
+                <option value="きれい">きれい</option>
+                <option value="普通" selected>普通</option>
+                <option value="動作優先">動作優先</option>
+            </select>
+        </div>
+        <br><br>
+        <input class="button--large" id="startButton" value="START">
+    </form>
+</body>
+</html>
